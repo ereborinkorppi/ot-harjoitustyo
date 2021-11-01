@@ -1,6 +1,6 @@
 <h1>Ohjelmistotekniikka harjoitustyö</h1>
 
-<h2>Tehtävät</h2>
+<h2>Harjoitustehtävät</h2>
 
 <h3>Viikko 1:</h3>
 
