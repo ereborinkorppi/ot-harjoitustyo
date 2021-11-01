@@ -1,0 +1,114 @@
+commit 38ef843be9729821c7cae6fa4356daecbe2b6979
+Author: Eero Jantunen <jantunen.eero@gmail.com>
+Date:   Mon Nov 1 21:39:09 2021 +0200
+
+    poistettu filu1 ja nimetty toinen uusiksi
+
+ tiedostoja/file2.txt                 | 0
+ tiedostoja/{file1.txt => file22.txt} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 5aa9f492b722ef7b22c0c7cfb9132396a8afe960
+Author: Eero Jantunen <jantunen.eero@gmail.com>
+Date:   Mon Nov 1 21:35:16 2021 +0200
+
+    uusia tiedostoja kolme kpl
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit a4cac5cb03f8212aadb396017ecefd26fb9bb034
+Author: Eero Jantunen <jantunen.eero@gmail.com>
+Date:   Mon Nov 1 21:27:21 2021 +0200
+
+    modattu tiedostoja eka ja kolmas
+
+ eka.txt    | 5 ++---
+ kolmas.txt | 3 ++-
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+commit 97f75ee7d5124b0c7676a52861d44b39a6dd18cb
+Author: Eero Jantunen <jantunen.eero@gmail.com>
+Date:   Mon Nov 1 21:25:00 2021 +0200
+
+    tiedosto nimetty eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 65041eeeb936d5c72b6a6fe965d766fe1ea8b32a
+Author: Eero Jantunen <jantunen.eero@gmail.com>
+Date:   Mon Nov 1 21:22:58 2021 +0200
+
+    toinen tiedosto poistettu
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit afee8f38e167daaee933372cacd8a9caf30a0db3
+Author: Eero Jantunen <jantunen.eero@gmail.com>
+Date:   Mon Nov 1 21:21:28 2021 +0200
+
+    poistettu ja lisätty tekstiä tiedostoon
+
+ tiedosto.txt | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+commit b442aae0c5245173bc19b500e3c2b87038eac051
+Author: Eero Jantunen <jantunen.eero@gmail.com>
+Date:   Mon Nov 1 21:20:23 2021 +0200
+
+    kamaa tiedostoon
+
+ tiedosto.txt | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+
+commit e88eb62998a3eeb86c3a50f2c9013dd487662282
+Author: Eero Jantunen <jantunen.eero@gmail.com>
+Date:   Mon Nov 1 21:10:43 2021 +0200
+
+    uusi kansio ja tiedosto luotu
+
+ stuff/testitesti.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 367ea264d7e57252dd9bc2efd431e75da4c05dde
+Author: Eero Jantunen <jantunen.eero@gmail.com>
+Date:   Mon Nov 1 21:09:13 2021 +0200
+
+    tiedostoja toinen ja kolmas muokattu
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 7f76442f37566638599a9e7c58ebce05322ce047
+Author: Eero Jantunen <jantunen.eero@gmail.com>
+Date:   Mon Nov 1 21:07:59 2021 +0200
+
+    uusi 3. tiedosto luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit d12ebca886426a8949f3fd6e479fb23c5fa6d19a
+Author: Eero Jantunen <jantunen.eero@gmail.com>
+Date:   Mon Nov 1 21:05:43 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit db2dfbb828573c40861627d0d73037e630833d2b
+Author: Eero Jantunen <jantunen.eero@gmail.com>
+Date:   Mon Nov 1 21:03:19 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
