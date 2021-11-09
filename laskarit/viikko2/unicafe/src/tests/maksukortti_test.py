@@ -9,11 +9,11 @@ class TestMaksukortti(unittest.TestCase):
         self.assertNotEqual(self.maksukortti, None)
         
     def test_saldo_oikein(self):
-        self.assertNotEqual(self.maksukortti, 10)
+        self.assertEqual(self.maksukortti.saldo, 10)
         
     def test_saldo_vähenee(self):
-        self.maksukortti.ota_rahaa(10)
-        self.assertNotEqual(self.maksukortti, "Rahaa tulee")
+        self.maksukortti.ota_rahaa(5)
+        self.assertEqual(self.maksukortti.saldo, 5)
         
     def test_saldo_ei_muutu(self):
         self.maksukortti.ota_rahaa(20)
