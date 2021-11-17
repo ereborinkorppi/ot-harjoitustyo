@@ -1,11 +1,11 @@
 from tkinter import ttk, constants
+from budget import Budget
 
 class HomeView:
     def __init__(self, root, handle_add_new):
         self._root = root
         self._handle_add_new = handle_add_new
         self._frame = None
-
         self._initialize()
 
     def pack(self):
