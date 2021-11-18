@@ -7,9 +7,9 @@ class Budget:
     def add_income(self, income):
         if income > 0:
             self.incomes = self.incomes + income
-            return income
+            return str(income) + " lisätty tuloihin."
         else:
-            return "Tulon on oltava suurempi kuin 0"
+            return "Huom! Tulon on oltava suurempi kuin 0."
     
     def get_incomes(self):
         return self.incomes
@@ -17,9 +17,9 @@ class Budget:
     def add_expense(self, expense):
         if expense > 0:
             self.expenses = self.expenses + expense
-            return expense
+            return str(expense) + " lisätty menoihin."
         else:
-            return "Menon on oltava suurempi kuin 0"
+            return "Huom! Menon on oltava suurempi kuin 0."
     
     def get_expenses(self):
         return self.expenses
