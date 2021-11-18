@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 from budget import Budget
 
 class AddNewView:
