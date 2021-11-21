@@ -1,9 +1,54 @@
-<h1>Ohjelmistotekniikka harjoitustyö</h1>
+# BudjettiSovellus
 
-<h2>Harjoitustehtävät</h2>
+Sovelluksen avulla on tarkoitus voida pitää kirjaa kotitalouden tuloista ja menoista. Sovellus on vielä kehityksessä, mutta käyttöliittymä aukeaa jo ja tulon tai menon lisäys toimii (nämä tosin eivät näy vielä itse sovelluksessa).
 
-<h3>Viikko 1:</h3>
+## Huomio Python-versiosta
 
-[gitlog.txt](https://github.com/ereborinkorppi/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+Sovellus on tarkoitettu Python-versiolle 3.8<, mutta toimintaa on jouduttu testaamaan myös versiolla 3.6.
 
-[komentorivi.txt](https://github.com/ereborinkorppi/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+## Dokumentaatio
+
+- [Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
+- [Työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)
+
+## Asennus
+
+1. Asenna riippuvuudet komennolla:
+
+```bash
+poetry install
+```
+
+2. Käynnistä sovellus komennolla:
+
+```bash
+poetry run invoke start
+```
+
+## Komentorivitoiminnot
+
+### Ohjelman suorittaminen
+
+Ohjelma käynnistyy komennolla:
+
+```bash
+poetry run invoke start
+```
+
+### Testaus
+
+Testaus suoritetaan komennolla:
+
+```bash
+poetry run invoke test
+```
+
+### Testikattavuus
+
+Testikattavuusraportin generointi onnistuu komennolla:
+
+```bash
+poetry run invoke coverage-report
+```
+
+Raportti generoituu _htmlcov_-hakemistoon.
