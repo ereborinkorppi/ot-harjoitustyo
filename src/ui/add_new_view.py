@@ -40,7 +40,7 @@ class AddNewView:
         button1 = ttk.Button(
             master=self._frame,
             text="Lisää uusi",
-            command=lambda: [self.check_and_add_amount_entry(amount_entry.get(), var.get())]
+            command=lambda: [self.check_and_add_amount_entry(amount_entry.get(), var.get()),amount_entry.delete(0, 'end')]
         )
         button2 = ttk.Button(
             master=self._frame,

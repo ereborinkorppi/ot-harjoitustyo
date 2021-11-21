@@ -9,3 +9,4 @@
 | 17.11. | 2    | hyvin alustavaa sovelluslogiikkaa luotu ja testailtu käyttöliittymän kautta |
 | 18.11. | 3    | käyttöliittymä toimimaan tulo- ja menolisäysten kanssa, sekä testiongelmien selvittely |
 | 21.11. | 2    | ensimmäiset testit ja testien suoritusongelmat invoke komentojen kanssa |
+| 22.11. | 1    | testiongelmien korjaukset ja toiminnan varmistus virtuaalityöaseman kautta |
