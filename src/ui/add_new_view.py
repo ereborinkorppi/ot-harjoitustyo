@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
-from budget import Budget
+from services.budget import Budget
 
 class AddNewView:
     def __init__(self, root, handle_home):

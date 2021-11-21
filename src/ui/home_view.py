@@ -1,5 +1,5 @@
 from tkinter import ttk, constants
-from budget import Budget
+from services.budget import Budget
 
 class HomeView:
     def __init__(self, root, handle_add_new):

@@ -8,3 +8,4 @@
 | 14.11. | 3    | raaka versio käyttöliittymästä ja sovelluksesta (ilman logiikkaa), sekä yritykset testata sovellusta yliopiston koneelta |
 | 17.11. | 2    | hyvin alustavaa sovelluslogiikkaa luotu ja testailtu käyttöliittymän kautta |
 | 18.11. | 3    | käyttöliittymä toimimaan tulo- ja menolisäysten kanssa, sekä testiongelmien selvittely |
+| 21.11. | 2    | ensimmäiset testit ja testien suoritusongelmat invoke komentojen kanssa |
