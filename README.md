@@ -13,13 +13,13 @@ Sovellus on tarkoitettu Python-versiolle 3.8<, mutta toimintaa on jouduttu testa
 
 ## Asennus
 
-1. Asenna riippuvuudet komennolla:
+1. Riippuvuudet asennetaan komennolla:
 
 ```bash
 poetry install
 ```
 
-2. Käynnistä sovellus komennolla:
+2. Ohjelma käynnistetään komennolla:
 
 ```bash
 poetry run invoke start
@@ -29,7 +29,7 @@ poetry run invoke start
 
 ### Ohjelman suorittaminen
 
-Ohjelma käynnistyy komennolla:
+Ohjelma käynnistetään komennolla:
 
 ```bash
 poetry run invoke start
@@ -45,10 +45,10 @@ poetry run invoke test
 
 ### Testikattavuus
 
-Testikattavuusraportin generointi onnistuu komennolla:
+Testikattavuusraportti luodaan komennolla:
 
 ```bash
 poetry run invoke coverage-report
 ```
 
-Raportti generoituu _htmlcov_-hakemistoon.
+Raportti muodostuu _htmlcov_-hakemistoon.
