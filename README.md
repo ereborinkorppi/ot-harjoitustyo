@@ -4,7 +4,7 @@ Sovelluksen avulla on tarkoitus voida pitää kirjaa kotitalouden tuloista ja me
 
 ## Huomio Python-versiosta
 
-Sovellus on tarkoitettu Python-versiolle 3.8<, mutta toimintaa on jouduttu testaamaan myös versiolla 3.6.
+Sovellus on tarkoitettu toimivaksi Python-versioille 3.8<.
 
 ## Dokumentaatio
 
@@ -19,7 +19,13 @@ Sovellus on tarkoitettu Python-versiolle 3.8<, mutta toimintaa on jouduttu testa
 poetry install
 ```
 
-2. Ohjelma käynnistetään komennolla:
+2. Esimmäisellä kerralla alustetaan ohjelma (luodaan tietokanta valmiiksi):
+
+```bash
+poetry run invoke build
+```
+
+3. Ohjelma käynnistetään komennolla:
 
 ```bash
 poetry run invoke start
@@ -51,4 +57,10 @@ Testikattavuusraportti luodaan komennolla:
 poetry run invoke coverage-report
 ```
 
-Raportti muodostuu _htmlcov_-hakemistoon.
+### Koodinlaatu
+
+Laaturaportti luodaan komennolla:
+
+```bash
+poetry run invoke lint
+```
