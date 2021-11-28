@@ -13,3 +13,4 @@
 | 25.11. | 2    | sqliten käyttöön tutustuminen ja harjoittelu |
 | 26.11. | 2    | uuden sqlite tietokannan käyttöön alustaminen ja uusien repository ja entity luokkien luominen |
 | 27.11. | 3    | muutettu sovelluslogiikka/käyttöliittymä käyttämään tietokantaa sekä lisätty mahdollisuus hakea lisätyt tiedot |
+| 28.11. | 4    | pylint lisätty, lisätty .env ja config filen käyttö sekä rakennettu testejä uusiksi tietokantamuutoksen ja repositoriomallin jälkeen |
