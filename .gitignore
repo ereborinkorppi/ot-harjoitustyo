@@ -5,8 +5,12 @@
 /laskarit/viikko2/unicafe/.coverage
 /laskarit/viikko2/unicafe/htmlcov
 
+#test
 .coverage
 .pytest_cache
 htmlcov
 __pycache__
+
+# data
 data/database.sqlite
+data/test-database.sqlite
