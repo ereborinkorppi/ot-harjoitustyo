@@ -12,6 +12,7 @@
 | 22.11. | 1    | testiongelmien korjaukset ja toiminnan varmistus virtuaalityöaseman kautta |
 | 25.11. | 2    | sqliten käyttöön tutustuminen ja harjoittelu |
 | 26.11. | 2    | uuden sqlite tietokannan käyttöön alustaminen ja uusien repository ja entity luokkien luominen |
-| 27.11. | 3    | muutettu sovelluslogiikka/käyttöliittymä käyttämään tietokantaa sekä lisätty mahdollisuus hakea lisätyt tiedot |
+| 27.11. | 3    | muutettu sovelluslogiikka/käyttöliittymä käyttämään tietokantaa sekä lisätty mahdollisuus hakea lisätyt budjettitiedot |
 | 28.11. | 4    | pylint lisätty, lisätty .env ja config filen käyttö sekä rakennettu testejä uusiksi tietokantamuutoksen ja repositoriomallin jälkeen |
 | 29.11. | 2    | testien ajo debugaus ja kokeilu yliopiston koneella, riippuvuusongelman selvitteyn aloitus |
+| 30.11. | 2    | testejä lisää sekä pakkauskaavio |
