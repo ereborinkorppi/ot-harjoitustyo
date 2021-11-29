@@ -1,4 +1,3 @@
-from entities.budget_item import BudgetItem
 from database_connection import get_database_connection
 
 class BudgetItemRepository:
