@@ -1,6 +1,6 @@
 # BudjettiSovellus
 
-Sovelluksen avulla on tarkoitus voida pitää kirjaa kotitalouden tuloista ja menoista. Sovellus on vielä kehityksessä, mutta käyttöliittymä aukeaa jo ja tulon tai menon lisäys toimii (nämä tosin eivät näy vielä itse sovelluksessa).
+Sovelluksen avulla on tarkoitus voida pitää kirjaa kotitalouden tuloista ja menoista. Sovellus on vielä kehityksessä, mutta käyttöliittymä aukeaa jo ja tulon tai menon lisäys toimii, sekä tuloja, menoja ja budjettitilannetta voi tarkastella kotinäkymässä.
 
 ## Huomio Python-versiosta
 
