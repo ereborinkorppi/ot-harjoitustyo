@@ -16,3 +16,6 @@
 | 28.11. | 4    | pylint lisätty, lisätty .env ja config filen käyttö sekä rakennettu testejä uusiksi tietokantamuutoksen ja repositoriomallin jälkeen |
 | 29.11. | 2    | testien ajo debugaus ja kokeilu yliopiston koneella, riippuvuusongelman selvitteyn aloitus |
 | 30.11. | 2    | testejä lisää sekä pakkauskaavio |
+| 1.12. | 1    | fakerepositorion testikäyttöön tutustuminen referenssisovelluksen avulla |
+| 2.12. | 3    | sovelluslogiikkaluokan ensimmäiset testin feikkirepoa hyödyntäen, sekä tulo/meno kuvauksen lisäys sovellukseen |
+| total | 35   ||
