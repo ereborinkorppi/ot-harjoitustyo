@@ -18,7 +18,8 @@ def create_tables(connection):
         create table budget (
             id int primary key,
             sum float,
-            type int
+            type int,
+            desc text
         );
     ''')
 

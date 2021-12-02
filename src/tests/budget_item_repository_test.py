@@ -5,8 +5,8 @@ from entities.budget_item import BudgetItem
 class TestBudgetItemRepository(unittest.TestCase):
     def setUp(self):
         budget_item_repository.delete_all()
-        self.budget_item_income1 = BudgetItem(0, 500, 1)
-        self.budget_item_expense1 = BudgetItem(1, 200, 2)
+        self.budget_item_income1 = BudgetItem(0, 500, 1, "tulo")
+        self.budget_item_expense1 = BudgetItem(1, 200, 2, "meno")
         budget_item_repository.create(self.budget_item_income1)
         budget_item_repository.create(self.budget_item_expense1)
     
@@ -20,7 +20,7 @@ class TestBudgetItemRepository(unittest.TestCase):
         self.assertEqual(next_id, 2)
     
     def test_get_incomes(self):
-        self.budget_item_income2 = BudgetItem(2, 100, 1)
+        self.budget_item_income2 = BudgetItem(2, 100, 1, "palkka")
         budget_item_repository.create(self.budget_item_income2)
         self.assertEqual(budget_item_repository.get_incomes(), 600)
         

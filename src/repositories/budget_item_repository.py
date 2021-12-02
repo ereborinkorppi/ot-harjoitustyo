@@ -10,8 +10,8 @@ class BudgetItemRepository:
         cursor = self._connection.cursor()
 
         cursor.execute(
-            'insert into budget (id, sum, type) values (?, ?, ?)',
-            (budget_item.id, budget_item.sum, budget_item.type)
+            'insert into budget (id, sum, type, desc) values (?, ?, ?, ?)',
+            (budget_item.id, budget_item.sum, budget_item.type, budget_item.desc)
         )
 
         self._connection.commit()

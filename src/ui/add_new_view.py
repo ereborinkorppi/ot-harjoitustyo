@@ -15,17 +15,19 @@ class AddNewView:
     def destroy(self):
         self._frame.destroy()
     
-    def new_budget_item(self, amount_entry, var):
-        entry = amount_entry
+    def new_budget_item(self, amount_entry, var, desc_entry):
         try:
-            self.sum = float(entry)
+            self.sum = float(amount_entry)
             if self.sum > 0:
                 id = budget_service.get_next_id()
-                budget_service.create_budget_item(id, self.sum, var)
-                if var == 1:
-                    messagebox.showinfo("Vahvistus", str(self.sum) + " lisätty tuloihin.")
-                if var == 2:
-                    messagebox.showinfo("Vahvistus", str(self.sum) + " lisätty menoihin.")
+                budget_service.create_budget_item(id, self.sum, var, desc_entry)
+                if desc_entry:
+                    if var == 1:
+                        messagebox.showinfo("Vahvistus", str(self.sum) + " lisätty tuloihin.")
+                    if var == 2:
+                        messagebox.showinfo("Vahvistus", str(self.sum) + " lisätty menoihin.")
+                else:
+                    messagebox.showerror("Virhe!", "Kuvaus ei voi olla tyhjä.")
             else:
                 messagebox.showerror("Virhe!", "Summan on oltava suurempi kuin 0.")
         except ValueError:
@@ -40,11 +42,14 @@ class AddNewView:
         var.set(1)
         amount_entry = ttk.Entry(master=self._frame, text="0")
         amount_label = ttk.Label(master=self._frame, text="Summa")
+        desc_entry = ttk.Entry(master=self._frame, text="1")
+        desc_label = ttk.Label(master=self._frame, text="Kuvaus")
 
         button1 = ttk.Button(
             master=self._frame,
             text="Lisää uusi",
-            command=lambda: [self.new_budget_item(amount_entry.get(), var.get()),amount_entry.delete(0, 'end')]
+            command=lambda: [self.new_budget_item(amount_entry.get(), var.get(), desc_entry.get()),
+                             amount_entry.delete(0, 'end'), desc_entry.delete(0, 'end')]
         )
         button2 = ttk.Button(
             master=self._frame,
@@ -57,5 +62,7 @@ class AddNewView:
         expense.grid(row=1, column=1)
         amount_entry.grid(row=2, column=0)
         amount_label.grid(row=2, column=1)
-        button1.grid(row=3, column=0)
-        button2.grid(row=3, column=1)
+        desc_entry.grid(row=3, column=0)
+        desc_label.grid(row=3, column=1)
+        button1.grid(row=4, column=0)
+        button2.grid(row=4, column=1)
