@@ -16,9 +16,9 @@ def create_tables(connection):
 
     cursor.execute('''
         create table budget (
-            id int primary key,
-            sum float,
-            type int,
+            item_id int primary key,
+            amount float,
+            item_type int,
             desc text
         );
     ''')

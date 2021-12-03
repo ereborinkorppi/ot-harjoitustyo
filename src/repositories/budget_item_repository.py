@@ -10,8 +10,8 @@ class BudgetItemRepository:
         cursor = self._connection.cursor()
 
         cursor.execute(
-            'insert into budget (id, sum, type, desc) values (?, ?, ?, ?)',
-            (budget_item.id, budget_item.sum, budget_item.type, budget_item.desc)
+            'insert into budget (item_id, amount, item_type, desc) values (?, ?, ?, ?)',
+            (budget_item.item_id, budget_item.amount, budget_item.item_type, budget_item.desc)
         )
 
         self._connection.commit()
@@ -21,7 +21,7 @@ class BudgetItemRepository:
     def find_next_id(self):
         cursor = self._connection.cursor()
 
-        cursor.execute('select count(id) from budget')
+        cursor.execute('select count(item_id) from budget')
 
         next_id = cursor.fetchone()[0]
 
@@ -30,7 +30,7 @@ class BudgetItemRepository:
     def get_incomes(self):
         cursor = self._connection.cursor()
 
-        cursor.execute('select sum(sum) from budget where type = 1')
+        cursor.execute('select sum(amount) from budget where item_type = 1')
 
         incomes = cursor.fetchone()[0]
 
@@ -39,7 +39,7 @@ class BudgetItemRepository:
     def get_expenses(self):
         cursor = self._connection.cursor()
 
-        cursor.execute('select sum(sum) from budget where type = 2')
+        cursor.execute('select sum(amount) from budget where item_type = 2')
 
         expenses = cursor.fetchone()[0]
 

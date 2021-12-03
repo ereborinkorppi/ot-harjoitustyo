@@ -16,7 +16,7 @@ class HomeView:
     
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
-        heading = ttk.Label(master=self._frame, text="Kotinäkymä")
+        heading = ttk.Label(master=self._frame, text="Kotinäkymä", font="Helvetica 14 bold")
         incomes = ttk.Label(master=self._frame, text="Tulot:")
         incomes_amount = ttk.Label(master=self._frame, text=budget_service.get_incomes())
         expenses = ttk.Label(master=self._frame, text="Menot:")
@@ -30,11 +30,11 @@ class HomeView:
             command=self._handle_add_new
         )
 
-        heading.grid(row=0, column=0)
+        heading.grid(row=0, column=0, columnspan=2, pady=5)
         incomes.grid(row=1, column=0)
         incomes_amount.grid(row=1, column=1)
         expenses.grid(row=2, column=0)
         expenses_amount.grid(row=2, column=1)
         budget.grid(row=3, column=0)
         budget_amount.grid(row=3, column=1)
-        button.grid(row=4, column=0)
+        button.grid(row=4, column=0, columnspan=2, pady=5)

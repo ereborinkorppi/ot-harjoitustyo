@@ -15,8 +15,8 @@ class BudgetService:
         self.incomes = 0
         self.expenses = 0
 
-    def create_budget_item (self, id, sum, type, desc):
-        budget_item = self._budget_item_repository.create(BudgetItem(id, sum, type, desc))
+    def create_budget_item (self, item_id, amount, item_type, desc):
+        budget_item = self._budget_item_repository.create(BudgetItem(item_id, amount, item_type, desc))
 
         return budget_item
 

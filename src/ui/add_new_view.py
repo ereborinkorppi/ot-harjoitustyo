@@ -17,15 +17,16 @@ class AddNewView:
     
     def new_budget_item(self, amount_entry, var, desc_entry):
         try:
-            self.sum = float(amount_entry)
-            if self.sum > 0:
-                id = budget_service.get_next_id()
-                budget_service.create_budget_item(id, self.sum, var, desc_entry)
+            self.amount = float(amount_entry)
+            if self.amount > 0:
+                item_id = budget_service.get_next_id()
                 if desc_entry:
                     if var == 1:
-                        messagebox.showinfo("Vahvistus", str(self.sum) + " lisätty tuloihin.")
+                        messagebox.showinfo("Vahvistus", str(self.amount) + " lisätty tuloihin.")
+                        budget_service.create_budget_item(item_id, self.amount, var, desc_entry)
                     if var == 2:
-                        messagebox.showinfo("Vahvistus", str(self.sum) + " lisätty menoihin.")
+                        messagebox.showinfo("Vahvistus", str(self.amount) + " lisätty menoihin.")
+                        budget_service.create_budget_item(item_id, self.amount, var, desc_entry)
                 else:
                     messagebox.showerror("Virhe!", "Kuvaus ei voi olla tyhjä.")
             else:
@@ -35,7 +36,7 @@ class AddNewView:
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
-        heading = ttk.Label(master=self._frame, text="Lisää uusi:")
+        heading = ttk.Label(master=self._frame, text="Lisää uusi:", font="Helvetica 14 bold")
         var = IntVar()
         income = ttk.Radiobutton(master=self._frame, text="Tulo", variable=var, value=1)
         expense = ttk.Radiobutton(master=self._frame, text="Meno", variable=var, value=2)
@@ -53,16 +54,16 @@ class AddNewView:
         )
         button2 = ttk.Button(
             master=self._frame,
-            text="Palaa etusivulle",
+            text="Takaisin",
             command=self._handle_home
         )
 
-        heading.grid(row=0, column=0)
+        heading.grid(row=0, column=0, pady=5)
         income.grid(row=1, column=0)
         expense.grid(row=1, column=1)
         amount_entry.grid(row=2, column=0)
         amount_label.grid(row=2, column=1)
         desc_entry.grid(row=3, column=0)
         desc_label.grid(row=3, column=1)
-        button1.grid(row=4, column=0)
-        button2.grid(row=4, column=1)
+        button1.grid(row=4, column=0, pady=5)
+        button2.grid(row=4, column=1, pady=5)
