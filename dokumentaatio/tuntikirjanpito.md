@@ -19,4 +19,4 @@
 | 1.12. | 1    | fakerepositorion testikäyttöön tutustuminen referenssisovelluksen avulla |
 | 2.12. | 3    | sovelluslogiikkaluokan ensimmäiset testin feikkirepoa hyödyntäen, sekä tulo/meno kuvauksen lisäys sovellukseen |
 | 3.12. | 3    | Uuden tulon/menon lisäyksen sekvenssikaavio, sekä pientä UI hienosäätöä/bugikorjausta (koodiscore ylös), korjattu myös typerästi nimetyt muuttujat|
-| total | 37   ||
+| total | 38   ||
