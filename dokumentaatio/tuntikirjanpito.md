@@ -18,4 +18,5 @@
 | 30.11. | 2    | testejä lisää sekä pakkauskaavio |
 | 1.12. | 1    | fakerepositorion testikäyttöön tutustuminen referenssisovelluksen avulla |
 | 2.12. | 3    | sovelluslogiikkaluokan ensimmäiset testin feikkirepoa hyödyntäen, sekä tulo/meno kuvauksen lisäys sovellukseen |
-| total | 35   ||
+| 3.12. | 2    | Uuden tulon/menon lisäyksen sekvenssikaavio, sekä pientä UI hienosäätöä |
+| total | 37   ||
