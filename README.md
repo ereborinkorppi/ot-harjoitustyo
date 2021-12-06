@@ -2,6 +2,10 @@
 
 Sovelluksen avulla on tarkoitus voida pitää kirjaa kotitalouden tuloista ja menoista. Sovellus on vielä kehityksessä, mutta käyttöliittymä aukeaa jo ja tulon tai menon lisäys toimii, sekä tuloja, menoja ja budjettitilannetta voi tarkastella kotinäkymässä.
 
+## Release 1
+
+- [Viikko 5 release 6.12.2021](https://github.com/ereborinkorppi/ot-harjoitustyo/releases)
+
 ## Huomio Python-versiosta
 
 Sovellus on tarkoitettu toimivaksi Python-versioille 3.8<.
