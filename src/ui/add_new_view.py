@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import ttk, constants, IntVar
 from tkinter import messagebox
 from services.budget_service import budget_service
 
