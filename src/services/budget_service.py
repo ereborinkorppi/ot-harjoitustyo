@@ -49,5 +49,16 @@ class BudgetService:
         budget = round(incomes - expenses, 2)
 
         return budget
+    
+    def get_budget_items(self, item_type):
+        """Palauttaa kaikki lisätyt yksittäiset tulot tai menot.
+        
+        Args:
+            item_type: Budjetti-itemin tyyppi eli tulo tai meno.
+
+        Returns:
+            BudgetItem-oliota sisältävä lista kaikista tuloiksi tai menoiksi kirjatuista budjetti-itemeistä.
+        """
+        return self._budget_item_repository.find_all_budget_items(item_type)
 
 budget_service = BudgetService()

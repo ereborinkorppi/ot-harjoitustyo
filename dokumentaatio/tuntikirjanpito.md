@@ -20,4 +20,5 @@
 | 2.12. | 3    | sovelluslogiikkaluokan ensimmäiset testin feikkirepoa hyödyntäen, sekä tulo/meno kuvauksen lisäys sovellukseen |
 | 3.12. | 3    | Uuden tulon/menon lisäyksen sekvenssikaavio, sekä pientä UI hienosäätöä/bugikorjausta (koodiscore ylös), korjattu myös typerästi nimetyt muuttujat|
 | 6.12. | 1    | Release 1 ja testaaminen yliopiston koneella |
-| total | 39   ||
+| 7.12. | 3    | Lisätty tulo- ja menoerittely toiminnallisuus sovelluslogiikkaan, repositorioon ja käyttöliittymään |
+| total | 42   ||

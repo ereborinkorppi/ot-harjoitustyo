@@ -1,4 +1,8 @@
+from entities.budget_item import BudgetItem
 from database_connection import get_database_connection
+
+def get_budget_item_by_row(row):
+    return BudgetItem(row['item_id'], row['amount'], row['item_type'], row['desc']) if row else None
 
 class BudgetItemRepository:
 
@@ -52,5 +56,27 @@ class BudgetItemRepository:
         cursor.execute('delete from budget')
 
         self._connection.commit()
+        
+    def find_all_budget_items(self, item_type):
+        """Palauttaa kaikki tulot tai menot.
+
+        Args:
+            item_type: Budjetti-itemin tyyppi eli tulo tai meno. 
+        
+        Returns:
+            Palauttaa listan BudgetItem-olioita.
+        """
+
+        cursor = self._connection.cursor()
+        
+        if item_type == 1:
+            cursor.execute('select * from budget where item_type = 1')
+        
+        if item_type == 2:
+            cursor.execute('select * from budget where item_type = 2')
+            
+        rows = cursor.fetchall()
+
+        return list(map(get_budget_item_by_row, rows))
 
 budget_item_repository = BudgetItemRepository(get_database_connection())
