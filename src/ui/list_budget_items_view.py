@@ -16,9 +16,9 @@ class ListBudgetItemsView:
     
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
-        heading = ttk.Label(master=self._frame, text="Tulo- ja menoerittely", font="Helvetica 14 bold")
+        heading = ttk.Label(master=self._frame, text="Tulo- ja menoerittely", font="Arial 14 bold")
         heading.grid(row=0, column=0, columnspan=2, pady=5)
-        incomes = ttk.Label(master=self._frame, text="Tulot:", font="Helvetica 12 bold underline")
+        incomes = ttk.Label(master=self._frame, text="Tulot:", font="Arial 12 underline")
         incomes.grid(row=1, column=0, pady=2)
         incomes_list = budget_service.get_budget_items(1)
         expenses_list = budget_service.get_budget_items(2)
@@ -31,7 +31,7 @@ class ListBudgetItemsView:
             income_item_desc.grid (row=i, column=0)
             income_item_amount.grid (row=i, column=1)
             i = i+1
-        expenses = ttk.Label(master=self._frame, text="Menot:", font="Helvetica 12 bold underline")
+        expenses = ttk.Label(master=self._frame, text="Menot:", font="Arial 12 underline")
         expenses.grid(row=i, column=0, pady=2)
         i = i+1
         for x in range(len(expenses_list)):

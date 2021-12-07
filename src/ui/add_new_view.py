@@ -36,7 +36,7 @@ class AddNewView:
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
-        heading = ttk.Label(master=self._frame, text="Lisää uusi:", font="Helvetica 14 bold")
+        heading = ttk.Label(master=self._frame, text="Lisää uusi:", font="Arial 14 bold")
         var = IntVar()
         income = ttk.Radiobutton(master=self._frame, text="Tulo", variable=var, value=1)
         expense = ttk.Radiobutton(master=self._frame, text="Meno", variable=var, value=2)

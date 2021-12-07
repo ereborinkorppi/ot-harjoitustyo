@@ -17,13 +17,13 @@ class HomeView:
     
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
-        heading = ttk.Label(master=self._frame, text="Kotinäkymä", font="Helvetica 14 bold")
+        heading = ttk.Label(master=self._frame, text="Kotinäkymä", font="Arial 14 bold")
         incomes = ttk.Label(master=self._frame, text="Tulot:")
         incomes_amount = ttk.Label(master=self._frame, text=budget_service.get_incomes())
         expenses = ttk.Label(master=self._frame, text="Menot:")
         expenses_amount = ttk.Label(master=self._frame, text=budget_service.get_expenses())
-        budget = ttk.Label(master=self._frame, text="Budjettitilanne:")
-        budget_amount = ttk.Label(master=self._frame, text=budget_service.get_budget())
+        budget = ttk.Label(master=self._frame, text="Budjettitilanne:", font="Arial 12 bold")
+        budget_amount = ttk.Label(master=self._frame, text=budget_service.get_budget(), font="Arial 12 bold")
         
         button1 = ttk.Button(
             master=self._frame,
