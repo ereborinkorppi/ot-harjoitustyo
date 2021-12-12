@@ -16,6 +16,16 @@ class FakeBudgetItemRepository:
         
         return next_id
     
+    def get_incomes(self):
+        incomes = sum(budget_item.amount for budget_item in self.budget if budget_item.item_type==1)
+
+        return incomes
+
+    def get_expenses(self):
+        expenses = sum(budget_item.amount for budget_item in self.budget if budget_item.item_type==2)
+
+        return expenses
+    
     def delete_all(self):
         self.budget = []
 
@@ -25,8 +35,19 @@ class TestBudgetService(unittest.TestCase):
             FakeBudgetItemRepository()
         )
         self.budget_service.create_budget_item(0, 500, 1, "palkka")
+        self.budget_service.create_budget_item(0, 300, 2, "vuokra")
     
     def test_get_next_id(self):
-        self.assertEqual(self.budget_service.get_next_id(), 1)
-        
-    
+        self.assertEqual(self.budget_service.get_next_id(), 2)
+
+    def test_get_incomes(self):
+        self.assertEqual(self.budget_service.get_incomes(), 500)
+
+    def test_get_expenses(self):
+        self.assertEqual(self.budget_service.get_expenses(), 300)
+
+    def test_get_budget(self):
+        incomes = self.budget_service.get_incomes()
+        expenses = self.budget_service.get_expenses()
+        budget = incomes - expenses
+        self.assertEqual(budget, 200)

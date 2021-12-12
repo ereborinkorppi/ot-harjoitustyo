@@ -3,6 +3,7 @@ from repositories.budget_item_repository import budget_item_repository
 from entities.budget_item import BudgetItem
 
 class TestBudgetItemRepository(unittest.TestCase):
+
     def setUp(self):
         budget_item_repository.delete_all()
         self.budget_item_income1 = BudgetItem(0, 500, 1, "tulo")
@@ -26,3 +27,7 @@ class TestBudgetItemRepository(unittest.TestCase):
         
     def test_get_expenses(self):
         self.assertEqual(budget_item_repository.get_expenses(), 200)
+    
+    def test_find_all_budget_items(self):
+        incomes_list = budget_item_repository.find_all_budget_items(1)
+        self.assertEqual(len(incomes_list), 1)
