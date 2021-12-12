@@ -3,6 +3,9 @@ from ui.gui import GUI
 
 
 def main():
+    """Käynnistää sovelluksen.
+    """
+
     window = Tk()
     window.title("Budjetointisovellus")
 
