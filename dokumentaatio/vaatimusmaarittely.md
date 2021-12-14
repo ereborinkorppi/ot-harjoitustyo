@@ -41,7 +41,7 @@ Kun nämä perustoiminnallisuudet on toteutettu, on mahdollisuuksien mukaan tark
   - Tulojen ja menojen lisääminen kuukausitasolla
   - Tulojen ja menojen tarkastelu kuukausitasolla
  
- ## Tehty 3.12.2021 mennessä
+ ## Tehty 14.12.2021 mennessä
  
  - Tulot ja menot näkyvät kotinäkymässä ylätasolla
  - Budjettitilanne eli mitä viivan alle jää näkyy kotinäkymässä
@@ -49,3 +49,4 @@ Kun nämä perustoiminnallisuudet on toteutettu, on mahdollisuuksien mukaan tark
  - Tulon ja menon lisäys toimii 
  - 2.12. lisätty uuden tulon ja menon kuvaus kenttä (menoja ja tuloja ei tosin vielä pääse tarkastelemaan listana joten lisätty kenttä ei näy sovelluksessa, mutta tallentuu kantaan.)
  - 3.12. bugifiksaus kuvaus kentän tyhjäksi jättöön ja paranneltu UI 
+ - 14.12. mennessä lisätty uusi näkymä käyttöliittymään jossa voi tarkastella tulo- ja menoerittelyä, sekä toteutettu tämän mahdollistava sovelluslogiikka.

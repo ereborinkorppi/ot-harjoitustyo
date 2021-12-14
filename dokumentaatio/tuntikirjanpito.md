@@ -21,4 +21,6 @@
 | 3.12. | 3    | Uuden tulon/menon lisäyksen sekvenssikaavio, sekä pientä UI hienosäätöä/bugikorjausta (koodiscore ylös), korjattu myös typerästi nimetyt muuttujat|
 | 6.12. | 1    | Release 1 ja testaaminen yliopiston koneella |
 | 7.12. | 3    | Lisätty tulo- ja menoerittely toiminnallisuus sovelluslogiikkaan, repositorioon ja käyttöliittymään |
-| total | 42   ||
+| 12.12. | 3    | Docstring dokumentaatiota tehty, sekä uusia testejä |
+| 14.12. | 3    | Käyttöohje, arkkitehtuurikuvaus, release 2 ja sen testaaminen yliopiston koneella |
+| total | 48  ||
