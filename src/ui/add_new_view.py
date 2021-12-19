@@ -18,19 +18,18 @@ class AddNewView:
     def new_budget_item(self, amount_entry, var, desc_entry):
         try:
             self.amount = float(amount_entry)
-            if self.amount > 0:
+            if 0 < self.amount < 9999999:
                 item_id = budget_service.get_next_id()
-                if desc_entry:
+                if 0 < len(desc_entry) < 25:
                     if var == 1:
                         messagebox.showinfo("Vahvistus", str(self.amount) + " lisätty tuloihin.")
-                        budget_service.create_budget_item(item_id, self.amount, var, desc_entry)
                     if var == 2:
                         messagebox.showinfo("Vahvistus", str(self.amount) + " lisätty menoihin.")
-                        budget_service.create_budget_item(item_id, self.amount, var, desc_entry)
+                    budget_service.create_budget_item(item_id, self.amount, var, desc_entry)
                 else:
-                    messagebox.showerror("Virhe!", "Kuvaus ei voi olla tyhjä.")
+                    messagebox.showerror("Virhe!", "Kuvaus on oltava 1-24 merkkiä pitkä")
             else:
-                messagebox.showerror("Virhe!", "Summan on oltava suurempi kuin 0.")
+                messagebox.showerror("Virhe!", "Summan on oltava väliltä 1-9999999")
         except ValueError:
             messagebox.showerror("Virhe!", "Syötä summa numeroina (esim. 1500 tai 12.5)")
 

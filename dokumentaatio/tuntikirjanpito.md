@@ -23,4 +23,7 @@
 | 7.12. | 3    | Lisätty tulo- ja menoerittely toiminnallisuus sovelluslogiikkaan, repositorioon ja käyttöliittymään |
 | 12.12. | 3    | Docstring dokumentaatiota tehty, sekä uusia testejä |
 | 14.12. | 3    | Käyttöohje, arkkitehtuurikuvaus, release 2 ja sen testaaminen yliopiston koneella |
-| total | 48  ||
+| 15.12. | 4    | Python kirjastoihin tutustuminen, ScorrableFrame -kirjaston käyttöön otto ja yritys saada UI toimimaan sen kanssa hienosti |
+| 18.12. | 2    | Tulo- ja menoerittely UI:n debugaaminen ja hienosäätö (ScorrableFrame kirjaston kanssa) |
+| 19.12. | 3    | UI hienosäätöä, koodin refaktorointia ja siistimistä, testien uusimista (refaktoroinnin myötä) |
+| total | 57  ||

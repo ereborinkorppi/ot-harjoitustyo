@@ -53,36 +53,6 @@ class BudgetItemRepository:
 
         return next_id
 
-    def get_incomes(self):
-        """Hakee tietokannasta summattuna kaikki tulot.
-
-        Returns:
-            float-arvossa kaikki tulot summattuna.
-        """
-
-        cursor = self._connection.cursor()
-
-        cursor.execute('select sum(amount) from budget where item_type = 1')
-
-        incomes = cursor.fetchone()[0]
-
-        return incomes
-
-    def get_expenses(self):
-        """Hakee tietokannasta summattuna kaikki menot.
-
-        Returns:
-            float-arvossa kaikki menot summattuna.
-        """
-
-        cursor = self._connection.cursor()
-
-        cursor.execute('select sum(amount) from budget where item_type = 2')
-
-        expenses = cursor.fetchone()[0]
-
-        return expenses
-
     def delete_all(self):
         """Poistaa tietokannasta kaikkirivit.
         """
@@ -110,10 +80,31 @@ class BudgetItemRepository:
 
         if item_type == 2:
             cursor.execute('select * from budget where item_type = 2')
-    
+
         rows = cursor.fetchall()
 
         return list(map(get_budget_item_by_row, rows))
+    
+    def get_incomes_or_expenses(self, item_type):
+        """Hakee tietokannasta summattuna kaikki tulot tai menot.
 
+        Args:
+            item_type: Budjetti-itemin tyyppi eli tulo tai meno.
+
+        Returns:
+            float-arvossa kaikki tulot tai menot summattuna.
+        """
+
+        cursor = self._connection.cursor()
+
+        if item_type == 1:
+            cursor.execute('select sum(amount) from budget where item_type = 1')
+
+        if item_type == 2:
+            cursor.execute('select sum(amount) from budget where item_type = 2')
+
+        incomes_expenses = cursor.fetchone()[0]
+
+        return incomes_expenses
 
 budget_item_repository = BudgetItemRepository(get_database_connection())

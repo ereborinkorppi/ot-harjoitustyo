@@ -23,10 +23,10 @@ class TestBudgetItemRepository(unittest.TestCase):
     def test_get_incomes(self):
         self.budget_item_income2 = BudgetItem(2, 100, 1, "palkka")
         budget_item_repository.create(self.budget_item_income2)
-        self.assertEqual(budget_item_repository.get_incomes(), 600)
+        self.assertEqual(budget_item_repository.get_incomes_or_expenses(1), 600)
         
     def test_get_expenses(self):
-        self.assertEqual(budget_item_repository.get_expenses(), 200)
+        self.assertEqual(budget_item_repository.get_incomes_or_expenses(2), 200)
     
     def test_find_all_budget_items(self):
         incomes_list = budget_item_repository.find_all_budget_items(1)

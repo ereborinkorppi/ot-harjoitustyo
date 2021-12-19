@@ -23,7 +23,7 @@ def create_tables(connection):
     Args:
         connection: Connection-olio tietokantayhteyttä varten
     """
-    
+
     cursor = connection.cursor()
 
     cursor.execute('''

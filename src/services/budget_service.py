@@ -34,8 +34,10 @@ class BudgetService:
         Returns:
             Luotu budjettimerkintä BudgetItem-olion muodossa.
         """
-        
-        budget_item = self._budget_item_repository.create(BudgetItem(item_id, amount, item_type, desc))
+
+        budget_item = self._budget_item_repository.create(
+            BudgetItem(item_id, amount, item_type, desc)
+        )
 
         return budget_item
 
@@ -45,36 +47,10 @@ class BudgetService:
         Returns:
             int-arvossa oleva next_id.
         """
-        
+
         next_id = self._budget_item_repository.find_next_id()
 
         return next_id
-
-    def get_incomes(self):
-        """Hakee kaikki tuloiksi merkityt budjettimerkinnät summattuna
-
-        Returns:
-            float-arvossa oleva incomes.
-        """
-
-        incomes = self._budget_item_repository.get_incomes()
-        if incomes is None:
-            incomes = 0
-
-        return incomes
-
-    def get_expenses(self):
-        """Hakee kaikki menoiksi merkityt budjettimerkinnät summattuna
-
-        Returns:
-            float-arvossa oleva expenses.
-        """
-
-        expenses = self._budget_item_repository.get_expenses()
-        if expenses is None:
-            expenses = 0
-
-        return expenses
 
     def get_budget(self):
         """Laskee mitä viivan alle jää, kun tuloista vähennetään menot
@@ -83,8 +59,8 @@ class BudgetService:
             float-arvossa oleva budget.
         """
 
-        incomes = self._budget_item_repository.get_incomes()
-        expenses = self._budget_item_repository.get_expenses()
+        incomes = self._budget_item_repository.get_incomes_or_expenses(1)
+        expenses = self._budget_item_repository.get_incomes_or_expenses(2)
         if incomes is None:
             incomes = 0
         if expenses is None:
@@ -100,10 +76,26 @@ class BudgetService:
             item_type: Budjetti-itemin tyyppi eli tulo tai meno.
 
         Returns:
-            BudgetItem-oliota sisältävä lista kaikista tuloiksi tai menoiksi kirjatuista budjetti-itemeistä.
+            BudgetItem-oliota sisältävä lista kaikista tuloiksi tai
+            menoiksi kirjatuista budjetti-itemeistä.
         """
 
         return self._budget_item_repository.find_all_budget_items(item_type)
+    
+    def get_incomes_or_expenses(self, item_type):
+        """Hakee kaikki tuloiksi tai menoiksi merkityt budjettimerkinnät summattuna
 
+        Args:
+            item_type: Budjetti-itemin tyyppi eli tulo tai meno.
+
+        Returns:
+            float-arvossa oleva tulojen tai menojen summa.
+        """
+
+        incomes_expenses = round(self._budget_item_repository.get_incomes_or_expenses(item_type),2)
+        if incomes_expenses is None:
+            incomes_expenses = 0
+
+        return incomes_expenses
 
 budget_service = BudgetService()

@@ -19,9 +19,9 @@ class HomeView:
         self._frame = ttk.Frame(master=self._root)
         heading = ttk.Label(master=self._frame, text="Kotinäkymä", font="Arial 14 bold")
         incomes = ttk.Label(master=self._frame, text="Tulot:")
-        incomes_amount = ttk.Label(master=self._frame, text=budget_service.get_incomes())
+        incomes_amount = ttk.Label(master=self._frame, text=budget_service.get_incomes_or_expenses(1))
         expenses = ttk.Label(master=self._frame, text="Menot:")
-        expenses_amount = ttk.Label(master=self._frame, text=budget_service.get_expenses())
+        expenses_amount = ttk.Label(master=self._frame, text=budget_service.get_incomes_or_expenses(2))
         budget = ttk.Label(master=self._frame, text="Budjettitilanne:", font="Arial 12 bold")
         budget_amount = ttk.Label(master=self._frame, text=budget_service.get_budget(), font="Arial 12 bold")
         
@@ -37,12 +37,12 @@ class HomeView:
             command=self._handle_list_budget_items
         )
 
-        heading.grid(row=0, column=0, columnspan=2, pady=5)
+        heading.grid(row=0, column=0, columnspan=2, pady=10)
         incomes.grid(row=1, column=0)
         incomes_amount.grid(row=1, column=1)
         expenses.grid(row=2, column=0)
         expenses_amount.grid(row=2, column=1)
-        budget.grid(row=3, column=0)
-        budget_amount.grid(row=3, column=1)
+        budget.grid(row=3, column=0, padx=5)
+        budget_amount.grid(row=3, column=1, padx=3)
         button1.grid(row=4, column=0, columnspan=2, pady=5)
-        button2.grid(row=5, column=0, columnspan=2, pady=3, padx=3)
+        button2.grid(row=5, column=0, columnspan=2, pady=3, padx=5)

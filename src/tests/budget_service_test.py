@@ -16,15 +16,14 @@ class FakeBudgetItemRepository:
         
         return next_id
     
-    def get_incomes(self):
-        incomes = sum(budget_item.amount for budget_item in self.budget if budget_item.item_type==1)
+    def get_incomes_or_expenses(self, item_type):
+        if item_type == 1:
+            incomes_expenses = sum(budget_item.amount for budget_item in self.budget if budget_item.item_type==1)
 
-        return incomes
-
-    def get_expenses(self):
-        expenses = sum(budget_item.amount for budget_item in self.budget if budget_item.item_type==2)
-
-        return expenses
+        if item_type == 2:
+            incomes_expenses = sum(budget_item.amount for budget_item in self.budget if budget_item.item_type==2)
+        
+        return incomes_expenses
     
     def delete_all(self):
         self.budget = []
@@ -35,19 +34,23 @@ class TestBudgetService(unittest.TestCase):
             FakeBudgetItemRepository()
         )
         self.budget_service.create_budget_item(0, 500, 1, "palkka")
-        self.budget_service.create_budget_item(0, 300, 2, "vuokra")
+        self.budget_service.create_budget_item(1, 300, 2, "vuokra")
+
+    def test_create(self):
+        self.budget_service.create_budget_item(self.budget_service.get_next_id(), 100, 2, "ravintola")
+        self.assertEqual(self.budget_service.get_next_id(), 3)
     
     def test_get_next_id(self):
         self.assertEqual(self.budget_service.get_next_id(), 2)
 
     def test_get_incomes(self):
-        self.assertEqual(self.budget_service.get_incomes(), 500)
+        self.assertEqual(self.budget_service.get_incomes_or_expenses(1), 500)
 
     def test_get_expenses(self):
-        self.assertEqual(self.budget_service.get_expenses(), 300)
+        self.assertEqual(self.budget_service.get_incomes_or_expenses(2), 300)
 
     def test_get_budget(self):
-        incomes = self.budget_service.get_incomes()
-        expenses = self.budget_service.get_expenses()
+        incomes = self.budget_service.get_incomes_or_expenses(1)
+        expenses = self.budget_service.get_incomes_or_expenses(2)
         budget = incomes - expenses
         self.assertEqual(budget, 200)
