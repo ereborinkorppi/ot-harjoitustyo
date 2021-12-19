@@ -81,7 +81,7 @@ class BudgetService:
         """
 
         return self._budget_item_repository.find_all_budget_items(item_type)
-    
+
     def get_incomes_or_expenses(self, item_type):
         """Hakee kaikki tuloiksi tai menoiksi merkityt budjettimerkinnät summattuna
 
@@ -92,9 +92,11 @@ class BudgetService:
             float-arvossa oleva tulojen tai menojen summa.
         """
 
-        incomes_expenses = round(self._budget_item_repository.get_incomes_or_expenses(item_type),2)
+        incomes_expenses = self._budget_item_repository.get_incomes_or_expenses(item_type)
         if incomes_expenses is None:
             incomes_expenses = 0
+        else:
+            incomes_expenses = round(incomes_expenses,2)
 
         return incomes_expenses
 

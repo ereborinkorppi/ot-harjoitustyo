@@ -84,7 +84,7 @@ class BudgetItemRepository:
         rows = cursor.fetchall()
 
         return list(map(get_budget_item_by_row, rows))
-    
+
     def get_incomes_or_expenses(self, item_type):
         """Hakee tietokannasta summattuna kaikki tulot tai menot.
 
