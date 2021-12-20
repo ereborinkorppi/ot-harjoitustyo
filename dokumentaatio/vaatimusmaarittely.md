@@ -12,7 +12,7 @@ Aluksi sovellukseen tulee vain yhdenlaisia käyttäjiä eli _normaali käyttäj�
 
 Sovellus koostuu kolmesta eri näkymästä
 
-![](./kuvat/kayttoliittyma.png)
+![](./kuvat/kayttoliittyma_new.png)
 
 Sovellus aukeaa kotinäkymään, jossa näkee summatut tulot, sekä menot ja budjettitilanteen. Kotinäkymästä voi siirtyä lisäämään uusia tuloja ja menoja tai tarkastelemaan tulo- ja menoerittelyä. Lisää uusi ja tulo- ja menoerittelynäkymistä pääsee takaisin kotinäkymään.
 
