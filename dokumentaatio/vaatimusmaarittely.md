@@ -2,51 +2,44 @@
 
 ## Sovelluksen tarkoitus
 
-Sovelluksen on tarkoitus mahdollistaa kotitalouden budjetointi eli kirjata tulot ja menot, sekä tarkkailla niitä. 
+Sovelluksen on tarkoitus mahdollistaa kotitalouden budjetointi eli kirjata tulot ja menot, sekä tarkkailla niitä summattuna ja eriteltynä. 
 
 ## Käyttäjät
 
-Aluksi sovellukseen tulee vain yhdenlaisia käyttäjiä eli _normaali käyttäjä_, joka voi toimia ilman kirjautumista, sillä tarkoitus on, että kaikki taloudessa voivat lisätä sekä nähdä tulot ja menot. Myöhemmin saatetaan tehdä laajemmat oikeudet omaava kirjautumisen vaativa _ylläpitäjä_ joka voisi luoda uusia luokkia (mikäli sellaiset tehdään), sekä muokata ja poistaa tietoja.
+Aluksi sovellukseen tulee vain yhdenlaisia käyttäjiä eli _normaali käyttäjä_, joka voi toimia ilman kirjautumista, sillä tarkoitus on, että kaikki taloudessa voivat lisätä sekä nähdä tulot ja menot. Jatkokehityksenä saatetaan tehdä laajemmat oikeudet omaava kirjautumisen vaativa _ylläpitäjä_ joka voisi myös muokata ja poistaa tietoja, sekä luoda/muokata/poistaa tuloja ja menoja yhdistäviä luokkia.
 
 ## Käyttöliittymäluonnos
 
-Sovellus koostuu aluksi kahdesta eri näkymästä
+Sovellus koostuu kolmesta eri näkymästä
 
 ![](./kuvat/kayttoliittyma.png)
 
-Sovellus aukeaa kotinäkymään, jossa näkee budjettitilanteen ja siitä voi siirtyä lisäämään uusia tuloja ja menoja. Mahdollinen ylläpitäjän kirjautuminen tulee tähän näkymään myös.
+Sovellus aukeaa kotinäkymään, jossa näkee summatut tulot, sekä menot ja budjettitilanteen. Kotinäkymästä voi siirtyä lisäämään uusia tuloja ja menoja tai tarkastelemaan tulo- ja menoerittelyä. Lisää uusi ja tulo- ja menoerittelynäkymistä pääsee takaisin kotinäkymään.
 
 ## Perusversion tarjoama toiminnallisuus
 
 ### Normaalikäyttäjänä
 
-- Tarkastella budjettia (tuloja ja menoja kotinäkymässä)
-  - Tulot ja menot listattuna kotinäkymään
-  - Laskettu mitä budjettiin jää viivan alle tulojen ja menojen mukaan
+- Voi tarkastella budjettia ylätasolla
+  - Tulot ja menot näkyy yhteen summattuina kotinäkymässä
+  - Lisäksi on laskettu mitä budjettiin jää viivan alle kun tuloista vähennetään menot
 - Siirtyä uuden tulon tai menon lisäykseen
   - lisätä uuden tulon
   - lisätä uuden menon
+- Siirtyä tulo- ja menoerittelynäkymään
+  - näkee kaikki kirjatut tulot eriteltyinä
+  - näkee kaikki kirjatut menot eriteltyinä
 
 ## Jatkokehitysideoita
 
-Kun nämä perustoiminnallisuudet on toteutettu, on mahdollisuuksien mukaan tarkoitus lisätä mm. seuraavia toiminnallisuuksia:
+Näiden perustoiminnallisuuksien lisäksi voisi sovellusta laajentaa mahdollisuuksien mukaan mm. lisäämällä seuraavia toiminnallisuuksia:
 
 - Kirjautuminen ylläpitäjälle
   - Joka voi poistaa ja muokata tuloja, sekä menoja
-- Tulojen ja menojen ryhmittely omiin luokkiin
+- Tulojen ja menojen ryhmittely luokittain
   - Ylläpitäjä voi luoda uudet tulo- ja menoluokat
   - Tulojen ja menojen tarkastelu luokittain
 - Tulojen ja menojen ryhmittely kuukausittain
   - Kalenteritoiminnallisuuden lisääminen
   - Tulojen ja menojen lisääminen kuukausitasolla
   - Tulojen ja menojen tarkastelu kuukausitasolla
- 
- ## Tehty 14.12.2021 mennessä
- 
- - Tulot ja menot näkyvät kotinäkymässä ylätasolla
- - Budjettitilanne eli mitä viivan alle jää näkyy kotinäkymässä
- - Voi siirtyä lisäämään tuloja ja menoja
- - Tulon ja menon lisäys toimii 
- - 2.12. lisätty uuden tulon ja menon kuvaus kenttä (menoja ja tuloja ei tosin vielä pääse tarkastelemaan listana joten lisätty kenttä ei näy sovelluksessa, mutta tallentuu kantaan.)
- - 3.12. bugifiksaus kuvaus kentän tyhjäksi jättöön ja paranneltu UI 
- - 14.12. mennessä lisätty uusi näkymä käyttöliittymään jossa voi tarkastella tulo- ja menoerittelyä, sekä toteutettu tämän mahdollistava sovelluslogiikka.
