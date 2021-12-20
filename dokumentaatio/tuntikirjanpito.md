@@ -26,4 +26,5 @@
 | 15.12. | 4    | Python kirjastoihin tutustuminen, ScorrableFrame -kirjaston käyttöön otto ja yritys saada UI toimimaan sen kanssa hienosti |
 | 18.12. | 2    | Tulo- ja menoerittely UI:n debugaaminen ja hienosäätö (ScorrableFrame kirjaston kanssa) |
 | 19.12. | 3    | UI hienosäätöä, koodin refaktorointia ja siistimistä, testien uusimista (refaktoroinnin myötä) |
-| total | 57  ||
+| 20.12. | 1    | Päivitetty vaatimusmäärittelydokumentti ajantasalle |
+| total | 58  ||
