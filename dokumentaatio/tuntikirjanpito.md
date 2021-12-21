@@ -27,5 +27,5 @@
 | 18.12. | 2    | Tulo- ja menoerittely UI:n debugaaminen ja hienosäätö (ScorrableFrame kirjaston kanssa) |
 | 19.12. | 3    | UI hienosäätöä, koodin refaktorointia ja siistimistä, testien uusimista (refaktoroinnin myötä) |
 | 20.12. | 1    | Päivitetty vaatimusmäärittelydokumentti ajantasalle |
-| 22.12. | 3    | UI koodin refaktorointia, arkkitehtuuridokumentin päivitys, testausdokumentti |
+| 21.12. | 3    | UI koodin refaktorointia, arkkitehtuuridokumentin päivitys, testausdokumentti |
 | total | 61  ||
