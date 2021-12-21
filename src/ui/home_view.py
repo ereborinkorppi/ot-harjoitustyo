@@ -14,23 +14,33 @@ class HomeView:
 
     def destroy(self):
         self._frame.destroy()
-    
+
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
         heading = ttk.Label(master=self._frame, text="Kotinäkymä", font="Arial 14 bold")
         incomes = ttk.Label(master=self._frame, text="Tulot:")
-        incomes_amount = ttk.Label(master=self._frame, text=budget_service.get_incomes_or_expenses(1))
+        incomes_amount = ttk.Label(
+            master=self._frame,
+            text=budget_service.get_incomes_or_expenses(1)
+        )
         expenses = ttk.Label(master=self._frame, text="Menot:")
-        expenses_amount = ttk.Label(master=self._frame, text=budget_service.get_incomes_or_expenses(2))
+        expenses_amount = ttk.Label(
+            master=self._frame,
+            text=budget_service.get_incomes_or_expenses(2)
+        )
         budget = ttk.Label(master=self._frame, text="Budjettitilanne:", font="Arial 12 bold")
-        budget_amount = ttk.Label(master=self._frame, text=budget_service.get_budget(), font="Arial 12 bold")
-        
+        budget_amount = ttk.Label(
+            master=self._frame,
+            text=budget_service.get_budget(),
+            font="Arial 12 bold"
+        )
+
         button1 = ttk.Button(
             master=self._frame,
             text="Lisää tulo/meno",
             command=self._handle_add_new
         )
-        
+
         button2 = ttk.Button(
             master=self._frame,
             text="Näytä tulo- ja menoerittely",
