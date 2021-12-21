@@ -10,7 +10,7 @@ Unittestin avulla on suoritettu automatisoidusti ohjelman yksikkö- ja integraat
 
 ### Repositorio-luokka
 
-Repositorio-luokkaa `BudgetItemRepository` testataan erikseen testikäyttöön tarkoitetulla tietokannalla, joka on konfiguroitu _.env.test_-tiedostoon. `BudgetItemRepository`-luokan testauksesta vastaa [TestBudgetItemRepository](https://github.com/ereborinkorppi/ot-harjoitustyo/blob/master/src/tests/budget_item_repository_test.py)-testiluokalla.
+Repositorio-luokkaa `BudgetItemRepository` testataan erikseen testikäyttöön tarkoitetulla tietokannalla, joka on konfiguroitu _.env.test_-tiedostoon. `BudgetItemRepository`-luokan testauksesta vastaa [TestBudgetItemRepository](https://github.com/ereborinkorppi/ot-harjoitustyo/blob/master/src/tests/budget_item_repository_test.py)-testiluokka.
 
 ### Testikattavuus
 
