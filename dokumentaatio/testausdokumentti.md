@@ -26,7 +26,7 @@ Sovelluksen järjestelmätestit on suoritettu manuaalisesti.
 
 ### Asennus
 
-[käyttöohjetta](https://github.com/ereborinkorppi/ot-harjoitustyo/blob/master/dokumentaatio/kayttohje.md) noudattaen sovellus on haettu ja testattu erilaisissa Linux-ympäristöissä.
+[Käyttöohjetta](https://github.com/ereborinkorppi/ot-harjoitustyo/blob/master/dokumentaatio/kayttohje.md) noudattaen sovellus on haettu ja testattu erilaisissa Linux-ympäristöissä.
 
 Erilaisia konfiguraatioita ei ole testattu.
 
