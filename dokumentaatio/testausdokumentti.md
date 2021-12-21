@@ -32,4 +32,4 @@ Erilaisia konfiguraatioita ei ole testattu.
 
 ### Toiminnallisuudet
 
-Kaikki [vaatimusmäärittelydokumentin](https://github.com/ereborinkorppi/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md#perusversion-tarjoama-toiminnallisuus) ja käyttöohjeeseen listatut toiminnallisuudet on testattu. Lisää uusi -toiminnallisuuden kenttiin on kokeiltu syöttää virheellisiä (tyhjiä, väärää formaattia yms.) arvoja ja näistä pitäisi tulla järkevä ilmoitus.
+Kaikki [vaatimusmäärittelydokumenttiin](https://github.com/ereborinkorppi/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md#perusversion-tarjoama-toiminnallisuus) ja käyttöohjeeseen listatut toiminnallisuudet on testattu. Lisää uusi -toiminnallisuuden kenttiin on kokeiltu syöttää virheellisiä (tyhjiä, väärää formaattia yms.) arvoja ja näistä pitäisi tulla järkevä ilmoitus.
