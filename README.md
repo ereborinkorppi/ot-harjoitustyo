@@ -16,6 +16,7 @@ Sovellus on tarkoitettu toimivaksi Python-versioille 3.8<.
 - [Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
 - [Arkkitehtuuri](./dokumentaatio/arkkitehtuuri.md)
 - [Työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)
+- [Testausdokumentti](./dokumentaatio/testausdokumentti.md)
 
 ## Asennus
 

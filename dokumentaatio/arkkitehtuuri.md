@@ -36,10 +36,19 @@ Budjetin tulo- ja menotapahtumat tallennetaan SQLite-tietokannan tauluun `budget
 
 ## Päätoiminnallisuudet
 
-Alla on kuvattuna sovelluksen toimintalogiikkaa (nyt) yhden päätoiminnallisuuden osalta sekvenssikaaviona.
+Alla on kuvattuna sovelluksen toimintalogiikkaa yhden päätoiminnallisuuden osalta sekvenssikaaviona.
 
 ### Uuden tulon/menon lisääminen
 
 Kun lisää uusi -näkymässä on valittu tulo tai meno, syötetty summa, sekä kuvaus ja painetaan "Lisää uusi" -painiketta etenee sovellluksen kontrolli näin:
 
 ![Uuden tulon/menon lisääminen](./kuvat/add_new_sekvenssikaavio.png)
+
+### Muut toiminnallisuudet
+
+Tulojen ja menojen hakeminen sekä etusivulle, että tulo- ja menoerittely -näkymään toimivat saman periaatteen mukaisesti. Sovelluslogiikasta vastaavia metodeja jotka tuovat joka summatu tulot/menot, budjettitilanteen tai eritellyt tulot ja menot näkyviin kutsutaan käyttöliittymän tapahtumakäsittelijän kautta.
+Näitä metodeja kutsutaan siirtyessä näkymästä toiseen, jolloin käyttäjälle välittyvä tilanne on aina ajantasalla.
+
+## Rakenteeseen jääneet heikkoidet
+
+Vaikka ohjelman koodia onkin pyritty selkeyttämään ja refaktoroimaan turhaa koodia pois, on ainakin käyttöliittymän osalta koodissa edelleen toisteisuutta. Lisäksi käyttöliittymän [ListBudgetItemsView](https://github.com/ereborinkorppi/ot-harjoitustyo/blob/master/src/ui/list_budget_items_view.py) käyttää ScrollableFrame -kirjaston importissa villiäkorttia.
