@@ -1,6 +1,6 @@
 # BudjettiSovellus
 
-Sovelluksen avulla on tarkoitus voida pitää kirjaa kotitalouden tuloista ja menoista. Sovellus on vielä kehityksessä, mutta käyttöliittymä aukeaa jo ja tulon tai menon lisäys toimii. Lisäksi sekä tuloja, menoja että budjettitilannetta voi tarkastella kotinäkymässä ja lisäksi voi avata erillisen tulo- ja menoerittely -näkymän.
+Sovelluksen avulla on tarkoitus voida pitää kirjaa kotitalouden tuloista ja menoista. Sovellus ei ole täydellinen, mutta käyttöliittymä toimii sulavasti, kuten myös tulon tai menon lisäys, sekä yhteenlaskettuja tuloja, menoja että budjettitilannetta voi tarkastella kotinäkymässä. Lisäksi voi avata erillisen tulo- ja menoerittely -näkymän, josta näkee tulojen kuvaukset summien lisäksi.
 
 ## Releaset
 
