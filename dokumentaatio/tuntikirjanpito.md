@@ -28,4 +28,5 @@
 | 19.12. | 3    | UI hienosäätöä, koodin refaktorointia ja siistimistä, testien uusimista (refaktoroinnin myötä) |
 | 20.12. | 1    | Päivitetty vaatimusmäärittelydokumentti ajantasalle |
 | 21.12. | 3    | UI koodin refaktorointia, arkkitehtuuridokumentin päivitys, testausdokumentti |
-| total | 61  ||
+| 23.12. | 1    | Loppupalautus release ja vielä kerrän testaus yliopiston koneella |
+| total | 62  ||
